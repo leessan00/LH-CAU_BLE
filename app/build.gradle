@@ -18,6 +18,25 @@ android {
     }
 }
 
+allprojects {
+    repositories {
+        maven {
+            url "https://jitpack.io"
+        }
+
+    }
+
+    repositories {
+        maven {
+            url "http://drgames.fr/maven2/"
+        }
+        mavenCentral()
+    }
+
+}
+
+
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
@@ -25,4 +44,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.github.PhilJay:MPAndroidChart-Realm:v3.0.3@aar'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    implementation 'com.github.afollestad:aesthetic:0.5.3'
+
+    implementation 'com.ramimartin.multibluetooth:AndroidMultiBluetoothLibrary:2.0.4-SNAPSHOT'
 }
